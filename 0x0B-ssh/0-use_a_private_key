@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-# script to ssh into my alx server
+i#!/usr/bin/env bash
+# script to ssh into my server
 
-ssh -i ~/.ssh/school ubuntu@54.160.95.54
+ssh ubuntu -i ~/.ssh/school 
 
