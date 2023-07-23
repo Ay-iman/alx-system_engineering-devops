@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Script to install and start nginx
-apt-get update
-apt-get install nginx -y
-service nginx start
+# script that restores the default server port
+
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
