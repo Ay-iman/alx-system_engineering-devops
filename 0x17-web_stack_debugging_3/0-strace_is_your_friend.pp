@@ -1,5 +1,6 @@
-# this manifest corrects the php file extension in the WP settings file
-exec {'fix file extension':
-  path    => ['/usr/bin', '/usr/local/bin', '/bin', '/usr/sbin'],
-  command => "sed -i 's/phpp/php/g' /var/www/html/wp-settings.php"
+# A puppet manuscript to replace a line in a file on a server
+# replace line containing "phpp" with "php"
+exec { 'replace_line':
+  command => "sed -i 's/phpp/php/g' '/var/www/html/wp-settings.php'",
+  path    => ['/bin','/usr/bin']
 }
